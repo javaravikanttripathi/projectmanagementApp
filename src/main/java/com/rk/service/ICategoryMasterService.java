@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.rk.model.CategoryMaster;
 
-public interface ICategoryService {
+public interface ICategoryMasterService {
 	public Integer saveCategoryMaster(CategoryMaster mst);
 
 	public List<CategoryMaster> getAllCategoryMaster();
@@ -15,5 +15,4 @@ public interface ICategoryService {
 
 	public void updateCategoryMaster(CategoryMaster cm);
 
-	public List<String> getOneRecordOnlyCatagoryMaster();
 }

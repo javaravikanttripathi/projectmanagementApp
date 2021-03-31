@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.rk.model.CategoryMaster;
-import com.rk.service.ICategoryService;
+import com.rk.service.ICategoryMasterService;
 
 @Controller
 @RequestMapping("/catmst")
 public class CategoryMasterController {
 	@Autowired
-	private ICategoryService service;
+	private ICategoryMasterService service;
 
 	@GetMapping("/show")
 	public String showMasterPage() {
@@ -57,10 +57,4 @@ public class CategoryMasterController {
 		return "DataAndRegister";
 	}
 
-	@GetMapping("/select")
-	public String getMultiObject(ModelMap map) {
-		List<String> list1 = service.getOneRecordOnlyCatagoryMaster();
-		map.addAttribute("list", list1);
-		return "SubCategoryMaster";
-	}
 }

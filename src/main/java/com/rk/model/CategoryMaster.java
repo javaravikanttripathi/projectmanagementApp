@@ -2,6 +2,7 @@ package com.rk.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +20,7 @@ public class CategoryMaster {
 	private String productCategory;
 	@Column(name = "prd_cat_desc")
 	private String productCategooryDescription;
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "cmfk")
 	private List<SubCategoryMaster> scmObj;
 

@@ -58,7 +58,9 @@ body {
 									<form:input path="productCategooryDescription" />
 								</div>
 							</div>
-							<div><p></p></div>
+							<div>
+								<p></p>
+							</div>
 							<button class="btn btn-lg btn-primary btn-block text-uppercase"
 								type="submit">UPDATE</button>
 						</form:form>

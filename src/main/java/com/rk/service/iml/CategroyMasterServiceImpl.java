@@ -6,14 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.rk.dao.ICategorymasterDao;
+import com.rk.dao.ICategoryMasterDao;
 import com.rk.model.CategoryMaster;
-import com.rk.service.ICategoryService;
+import com.rk.service.ICategoryMasterService;
 
 @Service
-public class CategroyServiceImpl implements ICategoryService {
+public class CategroyMasterServiceImpl implements ICategoryMasterService {
 	@Autowired
-	private ICategorymasterDao dao;
+	private ICategoryMasterDao dao;
 
 	@Override
 	@Transactional
@@ -45,12 +45,6 @@ public class CategroyServiceImpl implements ICategoryService {
 	@Transactional
 	public void updateCategoryMaster(CategoryMaster cm) {
 		dao.updateCategoryMaster(cm);
-	}
-
-	@Override
-	@Transactional(readOnly = true)
-	public List<String> getOneRecordOnlyCatagoryMaster() {
-		return dao.getOneRecordOnlyCatagoryMaster();
 	}
 
 }

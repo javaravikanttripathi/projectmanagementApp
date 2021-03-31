@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.rk.dao.ICategorymasterDao;
+import com.rk.dao.ICategoryMasterDao;
 import com.rk.model.CategoryMaster;
 
 @Repository
-public class CategoryMasterDaoImpl implements ICategorymasterDao {
+public class CategoryMasterDaoImpl implements ICategoryMasterDao {
 	@Autowired
 	private HibernateTemplate ht;
 
@@ -43,10 +43,5 @@ public class CategoryMasterDaoImpl implements ICategorymasterDao {
 		ht.update(cm);
 	}
 
-	@Override
-	public List<String> getOneRecordOnlyCatagoryMaster() {
-		String query = "SELECT productCategory FROM com.rk.model.CategoryMaster";
-		List<String> list = (List<String>) ht.find(query);
-		return list;
-	}
+	
 }
